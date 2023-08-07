@@ -1,0 +1,228 @@
+body{
+font-family: Arial;
+}
+
+.index{
+margin-top: 5%;
+}
+.col{
+display: flex;
+position: relative;
+justify-content: center;
+}
+.totalAmount{
+margin-right: 5px;
+}
+.carousel-img{
+    width: 100%;
+    border-radius: 25px;
+    max-height: 200px;
+}
+#carouselExampleLight{
+width: 600px;
+}
+#carouselExample{
+width: 200px;
+position: absolute;
+left: 5%;
+top: 15%;
+height: 150px;
+}
+#carouselExample2{
+width: 200px;
+position: absolute;
+right: 5%;
+top: 15%;
+height: 150px;
+}
+.min-carousel-img{
+width: 200px;
+border-radius: 25px;
+height: 150px;
+}
+
+.carousel-container{
+margin-top: 10px;
+display: flex;
+justify-content: center;
+position: relative;
+align-items: center;
+}
+
+.card{
+border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.bot-btn{
+bottom: 0;
+margin-bottom: 15px;
+}
+.change-quantity{
+display: none;
+flex-direction: row;
+align-items: center;
+}
+.btn-quantity{
+width: 40px;
+margin-left: 10px;
+}
+#span-quantity{
+font-weight: 800;
+margin-left: 10px;
+}
+.notification-div{
+display: flex;
+margin-top: 25px;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+.notification{
+color: green;
+font-size: 1.2em;
+font-weight: 800;
+}
+#korzinka{
+background: none;
+}
+#mini-korzinka{
+display: none;
+}
+#open-korzinka{
+border: 0.05px solid rgb(60, 179, 113);
+padding-left: 4px;
+}
+.korzine-modal{
+font-family: Casper;
+display: none;
+background: white;
+position: fixed;
+right: 0;
+top: 0;
+bottom: 0;
+width: 350px;
+z-index: 9999;
+}
+.korzine-modal-title{
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: 3px solid #4d4d4d;
+}
+.korzine-modal-items{
+display: flex;
+margin-top: 50px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.korzine-modal-items span{
+color: green;
+font-weight: 900;
+}
+.korzine-modal-payment{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 50px;
+}
+.close{
+cursor: pointer;
+position: absolute;
+margin-top: -11px;
+margin-left: 5px;
+font-size: 40px;
+}
+#overlay{
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 9998;
+}
+.close-button{
+border: none;
+background: white;
+}
+footer {
+  margin-top: 200px;
+  bottom: 0;
+  width: 100%;
+  height: 400px; /* Высота блока footer */
+  background-color: #f8f8f8; /* Цвет фона блока footer */
+  display: flex;
+}
+
+.map {
+  width: 50%; /* Ширина первой половины блока */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.info {
+  width: 50%; /* Ширина второй половины блока */
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  padding-left: 250px;
+  flex-direction: column;
+}
+.icons{
+display: flex;
+flex-direction: row;
+}
+.contact{
+width: 32px;
+margin-left: 20px;
+height: 32px;
+}
+#about{
+font-size: 0.85em;
+color: #787878;
+}
+
+@media (max-width: 1200px){
+.info {
+padding-left: 50px;
+}
+#carouselExample{
+display: none;
+}
+#carouselExample2{
+display: none;
+}
+}
+
+@media (max-width: 576px){
+.card{
+width: 70%;
+}
+.korzine-modal{
+width: 240px;
+}
+#korzinka{
+display: none;
+}
+#mini-korzinka{
+display: block;
+width: 32px;
+height: 32px;
+}
+.close{
+margin-top: -15px;
+}
+footer{
+justify-content: center;
+align-items: center;
+height: 700px;
+flex-direction: column;
+}
+.info{
+width: 95%;
+}
+}

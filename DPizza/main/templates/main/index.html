@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>DPizza</title>
+    <link rel="stylesheet" href="{% static 'main/js/app.js' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'main/js/app.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DPizza</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Контакты</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Соц.сети
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Instagram</a></li>
+            <li><a class="dropdown-item" href="#">VK</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Telegram</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div style="margin-right: 50px;">
+        <label class="totalAmount" for="korzinka"><span style="color: green;" id="totalAmount">0</span> руб</label>
+        <button id="open-korzinka" class="btn gradient-border">
+          <img id="korzinka" src="{% static 'main/img/korzinka.png' %}" alt="korzina">
+          <img id="mini-korzinka" src="{% static 'main/img/mini-korzinka.png' %}" alt="mini-korzinka">
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container carousel-container">
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="7000">
+      <img src="{% static 'main/img/action.jpg' %}" class="d-block min-carousel-img" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="7000">
+      <img src="{% static 'main/img/action2.jpg' %}" class="d-block min-carousel-img" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="7000">
+      <img src="{% static 'main/img/action3.jpg' %}" class="d-block min-carousel-img" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <div id="carouselExampleLight" class="carousel carousel-light slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="{% static 'main/img/new_menu.jpeg' %}" class="d-block carousel-img" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="{% static 'main/img/carousel-img.png' %}" class="d-block carousel-img" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="7000">
+                <img src="{% static 'main/img/carousel2.jpg' %}" class="d-block carousel-img" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleLight" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleLight" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="7000" >
+      <img src="{% static 'main/img/action4.jpg' %}" class="d-block min-carousel-img" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="7000">
+      <img src="{% static 'main/img/action6.jpg' %}" class="d-block min-carousel-img" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="7000">
+      <img src="{% static 'main/img/action5.jpg' %}" class="d-block min-carousel-img" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div>
+
+
+<div class="notification-div">
+  <p id="notification" class="notification"></p>
+</div>
+<div class="container index">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'main/img/pizza1.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Пицца "Ассорти"</h5>
+          <p class="card-text">Пицца четвертинками с ветчиной, цыпленком, томатами, брынзой, моцареллой, фирменным соусом альфредо</p>
+          <p>Цена: <span style="color: green;">700</span> руб.</p>
+          <button id="assorti" class="btn btn-success">В корзину</button>
+          <div class="change-quantity">
+              <button id="minusQuantity" style="margin: 0;" class="btn btn-dark btn-quantity">-</button>
+              <span id="span-quantity">1</span>
+              <button id="pluseQuantity" class="btn btn-dark btn-quantity">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'main/img/vetchina.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Пицца "Ветчина и сыр"</h5>
+          <p class="card-text">Ветчина, моцарелла, фирменный соус альфредо</p>
+          <p>Цена: <span style="color: green;">650</span> руб.</p>
+          <button id="vetchina" class="btn btn-success bot-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'main/img/havai.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Пицца "Гавайская"</h5>
+          <p class="card-text">Фирменный соус альфредо, цыпленок, моцарелла, ананасы</p>
+          <p>Цена: <span style="color: green;">550</span> руб.</p>
+          <button id="havai" class="btn btn-success bot-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'main/img/pepperoni.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Пицца "Пепперони"</h5>
+          <p class="card-text">Пикантная пепперони, увеличенная порция моцареллы, фирменный томатный соус</p>
+          <p>Цена: <span style="color: green;">650</span> руб.</p>
+          <button id="pepperoni" class="btn btn-success bot-btn">В корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="overlay"></div>
+<div id="korzine-modal" class="korzine-modal">
+  <div class="korzine-modal-content">
+    <span class="close">&times</span>
+    <h2 class="korzine-modal-title">Мой заказ</h2>
+    <div class="korzine-modal-items">
+    <!--тут будут айтемы добавленные в корзинку из app.js-->
+      <h2 style="padding-top: 50px; color: red;">Ваша корзина пуста</h2>
+      <img src="{% static 'main/img/nothing.svg' %}" alt="Пусто">
+    </div>
+    <div class="korzine-modal-payment">
+    <!--  тут будет общая сумма и оплата из app.js    -->
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="info">
+    <span style="font-weight: 900;">Информация</span>
+        <p>Ставропольский край, г. Георгиевск, ул. Пушкина, 66/1</p>
+        <p>с 9:00 до 22:00</p>
+        <p style="color: #E90C4E;">+7 996-630-41-06</p>
+    <div class="icons">
+      <a href="#"><img style="margin-left: 0;" class="contact" src="{% static 'main/img/telegram.png' %}" alt=""></a><a
+            href="#"><img class="contact"  src="{% static 'main/img/vk.png' %}" alt=""></a><a href="#"><img class="contact"  src="{% static 'main/img/whatsapp.png' %}" alt=""></a>
+    </div>
+        <p style="font-size: 0.7em; color: #787878;">*Instagram признана экстремистской организацией и запрещена в РФ</p>
+        <label style="font-weight: 800" for="about">О заведении</label>
+        <p id="about">Лучшая пиццерия в Георгиевске</p>
+  </div>
+  <div class="map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6594619c5fa09d6950ed1440ef3d733388feeefc204660c9297a7a94fa0cb95e&amp;width=320&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
