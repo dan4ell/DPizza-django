@@ -6,10 +6,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>DPizza</title>
-    <link rel="stylesheet" href="{% static 'main/js/app.js' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="{% static 'main/js/app.js' %}" defer></script>
+<!--    <script src="{% static 'main/js/app.js' %}" defer></script>-->
+    <script src="{% static 'main/js/new.js'%}" defer></script>
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
 <body>
@@ -134,15 +134,13 @@
     <div class="col">
       <div class="card">
         <img src="{% static 'main/img/pizza1.webp' %}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <div class="card-body product" data-price="700" data-name="Ассорти">
           <h5 class="card-title">Пицца "Ассорти"</h5>
           <p class="card-text">Пицца четвертинками с ветчиной, цыпленком, томатами, брынзой, моцареллой, фирменным соусом альфредо</p>
           <p>Цена: <span style="color: green;">700</span> руб.</p>
-          <button id="assorti" class="btn btn-success">В корзину</button>
+          <button btn-numb="0" class="btn btn-success buy-btn">В корзину</button>
           <div class="change-quantity">
-              <button id="minusQuantity" style="margin: 0;" class="btn btn-dark btn-quantity">-</button>
-              <span id="span-quantity">1</span>
-              <button id="pluseQuantity" class="btn btn-dark btn-quantity">+</button>
+<!--       тут изменение quantity         -->
           </div>
         </div>
       </div>
@@ -150,33 +148,42 @@
     <div class="col">
       <div class="card">
         <img src="{% static 'main/img/vetchina.webp' %}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <div class="card-body product" data-price="650" data-name="Ветчина и сыр">
           <h5 class="card-title">Пицца "Ветчина и сыр"</h5>
           <p class="card-text">Ветчина, моцарелла, фирменный соус альфредо</p>
           <p>Цена: <span style="color: green;">650</span> руб.</p>
-          <button id="vetchina" class="btn btn-success bot-btn">В корзину</button>
+          <button btn-numb="1"  class="btn btn-success bot-btn buy-btn">В корзину</button>
+            <div class="change-quantity">
+<!--       тут изменение quantity         -->
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <img src="{% static 'main/img/havai.webp' %}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <div class="card-body product" data-price="550" data-name="Гавайская">
           <h5 class="card-title">Пицца "Гавайская"</h5>
-          <p class="card-text">Фирменный соус альфредо, цыпленок, моцарелла, ананасы</p>
+          <p class="card-text">Фирменный соус Альфредо, цыпленок, моцарелла, ананасы</p>
           <p>Цена: <span style="color: green;">550</span> руб.</p>
-          <button id="havai" class="btn btn-success bot-btn">В корзину</button>
+          <button btn-numb="2" class="btn btn-success bot-btn buy-btn">В корзину</button>
+            <div class="change-quantity">
+<!--       тут изменение quantity         -->
+          </div>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
         <img src="{% static 'main/img/pepperoni.webp' %}" class="card-img-top" alt="...">
-        <div class="card-body">
+        <div class="card-body product" data-price="650" data-name="Пепперони">
           <h5 class="card-title">Пицца "Пепперони"</h5>
           <p class="card-text">Пикантная пепперони, увеличенная порция моцареллы, фирменный томатный соус</p>
           <p>Цена: <span style="color: green;">650</span> руб.</p>
-          <button id="pepperoni" class="btn btn-success bot-btn">В корзину</button>
+          <button btn-numb="3" id="pepperoni" class="btn btn-success bot-btn buy-btn">В корзину</button>
+            <div class="change-quantity">
+<!--       тут изменение quantity         -->
+          </div>
         </div>
       </div>
     </div>

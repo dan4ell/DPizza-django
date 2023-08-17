@@ -67,6 +67,7 @@ margin-left: 10px;
 }
 #span-quantity{
 font-weight: 800;
+color: green;
 margin-left: 10px;
 }
 .notification-div{
@@ -88,8 +89,7 @@ background: none;
 display: none;
 }
 #open-korzinka{
-border: 0.05px solid rgb(60, 179, 113);
-padding-left: 4px;
+border: none;
 }
 .korzine-modal{
 font-family: Casper;
@@ -212,6 +212,10 @@ display: none;
 display: block;
 width: 32px;
 height: 32px;
+}
+#open-korzinka{
+border: 0.05px solid rgb(60, 179, 113);
+padding-left: 4px;
 }
 .close{
 margin-top: -15px;
