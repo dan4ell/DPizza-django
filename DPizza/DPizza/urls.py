@@ -21,3 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls'))
 ]
+
+import telebot
+bot = telebot.TeleBot('6213453826:AAEgWtaaS9-Td9kZmuqRmg3KoH_2muhq-sQ')
+chat_id = '-1001955272769'

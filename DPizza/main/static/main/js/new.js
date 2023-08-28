@@ -188,3 +188,12 @@ function changeQuantity(buyButtons, productName, productPrice, btnAttr){
         }
     })
 }
+
+
+// прокрутка до footer
+link = document.getElementById('scroll-footer')
+footer = document.querySelector('footer')
+link.addEventListener('click', function(event){
+    event.preventDefault(); // убирает значения с ссылки типо href="#"
+    footer.scrollIntoView({behavior: 'smooth'}); // делаем скролл
+})

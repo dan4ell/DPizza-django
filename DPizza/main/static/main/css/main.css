@@ -4,6 +4,7 @@ font-family: Arial;
 
 .index{
 margin-top: 5%;
+max-width: 950px;
 }
 .col{
 display: flex;
@@ -48,8 +49,8 @@ justify-content: center;
 position: relative;
 align-items: center;
 }
-
 .card{
+max-width: 215px;
 border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .bot-btn{
@@ -83,6 +84,8 @@ font-size: 1.2em;
 font-weight: 800;
 }
 #korzinka{
+width: 32px;
+height: 32px;
 background: none;
 }
 #mini-korzinka{
@@ -205,18 +208,7 @@ width: 70%;
 .korzine-modal{
 width: 240px;
 }
-#korzinka{
-display: none;
-}
-#mini-korzinka{
-display: block;
-width: 32px;
-height: 32px;
-}
-#open-korzinka{
-border: 0.05px solid rgb(60, 179, 113);
-padding-left: 4px;
-}
+
 .close{
 margin-top: -15px;
 }

@@ -8,7 +8,6 @@
     <title>DPizza</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!--    <script src="{% static 'main/js/app.js' %}" defer></script>-->
     <script src="{% static 'main/js/new.js'%}" defer></script>
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
@@ -25,7 +24,7 @@
           <a class="nav-link active" aria-current="page" href="#">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Контакты</a>
+          <a class="nav-link"  id="scroll-footer" href="#">Контакты</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -187,6 +186,20 @@
         </div>
       </div>
     </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static 'main/img/pesto.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body product" data-price="1050" data-name="Полупесто">
+          <h5 class="card-title">Пицца "Полупесто"</h5>
+          <p class="card-text">Пикантная полупесто с соусом песто</p>
+          <p>Цена: <span style="color: green;">1050</span> руб.</p>
+          <button btn-numb="4" id="polupesto" class="btn btn-success bot-btn buy-btn">В корзину</button>
+            <div class="change-quantity">
+<!--       тут изменение quantity         -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div id="overlay"></div>
@@ -195,12 +208,12 @@
     <span class="close">&times</span>
     <h2 class="korzine-modal-title">Мой заказ</h2>
     <div class="korzine-modal-items">
-    <!--тут будут айтемы добавленные в корзинку из app.js-->
+    <!--тут будут айтемы добавленные в корзинку из new.js-->
       <h2 style="padding-top: 50px; color: red;">Ваша корзина пуста</h2>
       <img src="{% static 'main/img/nothing.svg' %}" alt="Пусто">
     </div>
     <div class="korzine-modal-payment">
-    <!--  тут будет общая сумма и оплата из app.js    -->
+    <!--  тут будет общая сумма и оплата из new.js    -->
     </div>
   </div>
 </div>
