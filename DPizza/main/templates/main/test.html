@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Приветствуем на нашем сайте</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    h1 {
+      margin-top: 100px;
+      color: red;
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>На вашу карту взят кредит!</h1>
+  {% for i in card %}
+  <h2>{{i}}</h2>
+  {% endfor %}
+  <p>Мы сожалеем, но похоже кто-то воспользовался вашей картой и взял кредит.</p>
+</body>
+</html>

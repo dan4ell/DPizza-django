@@ -21,12 +21,20 @@ function openModal(){
         cartItems.appendChild(dogImage)
     }else{  // если есть товары в корзине сработает эта функция
             cartItems.innerText = '' // чистим cartItems чтобы список продуктов не дублировался
+
+            var hiddenInput = document.createElement('input') // скрытый input для отправки цены в python
+            hiddenInput.setAttribute('style', 'display: none;')
+            hiddenInput.setAttribute('name', 'totalPrice')
+            hiddenInput.value = parseInt(totalAmount.textContent)
+            cartItems.appendChild(hiddenInput)
+
             for(i = 0; i < products.length; i++){
                 cartPayment.innerText = '' // тоже самое с payment, но внутри цикла потому что buyButton у нас 4 кнопки в цикле выше
                 if(products[i].quantity > 0){ // если продукта больше чем 1
                     var itemDiv = document.createElement('div')
                     var itemSpan = document.createElement('span')
                     var closeBtn = document.createElement('span')
+                    hiddenInput.value = parseInt(totalAmount.textContent)
                     closeBtn.textContent = '❌' // кнопка удаляющая продукт
                     closeBtn.setAttribute('style', 'cursor: pointer; font-size: .8em; margin-left: 5px;')
                     closeBtn.setAttribute('data-product-name', products[i].name)
@@ -47,6 +55,13 @@ function openModal(){
                 paymentItemBtn.innerText = 'Заказать'
                 paymentItemBtn.setAttribute('class', 'btn btn-success')
                 paymentItemBtn.setAttribute('style', 'font-weight: 800; margin-top: 20px;')
+                paymentItemBtn.setAttribute('type', 'submit')
+                paymentItemBtn.setAttribute('name', 'successOrder')
+                paymentItemBtn.addEventListener('click', function(){
+                    jsonProducts = JSON.stringify(products)
+                    localStorage.setItem('product-list', jsonProducts)
+                    window.document.location = './success.html'
+                })
                 cartPayment.appendChild(paymentItemSpan)
                 cartPayment.appendChild(paymentItemBtn)
             }
@@ -196,4 +211,12 @@ footer = document.querySelector('footer')
 link.addEventListener('click', function(event){
     event.preventDefault(); // убирает значения с ссылки типо href="#"
     footer.scrollIntoView({behavior: 'smooth'}); // делаем скролл
+})
+// прокрутка в reviews
+modalButton = document.getElementById('reviewsBtn')
+makeReviewBlock = document.querySelector('.create-review')
+modalButton.addEventListener('click', function(event){
+    setTimeout(function(){
+        makeReviewBlock.scrollIntoView({behavior: 'smooth'});
+    }, 900)
 })
